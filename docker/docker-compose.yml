@@ -1,0 +1,21 @@
+version: "3"
+services:
+  db:
+    image: postgres:14.3
+    #restart: always
+    #volumes:
+    #  - ${VOLUMES_PATH}/postgres:/var/lib/postgresql/data??
+    environment:
+      - POSTGRES_PASSWORD=${DOCKER_POSTGRES_PASS}
+      - POSTGRES_USER=${DOCKER_POSTGRES_USER}
+      - POSTGRES_DB=${DOCKER_POSTGRES_DB}
+
+  api:
+    image: tekever/task2:latest
+    #restart: always
+    depends_on:
+      - db
+    volumes:
+      - ../src:/task2
+    ports:
+      - ${PORT}:8000
