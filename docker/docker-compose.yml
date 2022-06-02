@@ -6,9 +6,9 @@ services:
     #volumes:
     #  - ${VOLUMES_PATH}/postgres:/var/lib/postgresql/data??
     environment:
-      - POSTGRES_PASSWORD=${DOCKER_POSTGRES_PASS}
-      - POSTGRES_USER=${DOCKER_POSTGRES_USER}
-      - POSTGRES_DB=${DOCKER_POSTGRES_DB}
+      - POSTGRES_PASSWORD=${POSTGRES_PASS}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_DB=${POSTGRES_DB}
 
   api:
     image: tekever/task2:latest
