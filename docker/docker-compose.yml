@@ -1,8 +1,8 @@
 version: "3"
 services:
   db:
+    container_name: tekever_db
     image: postgres:14.3
-    #restart: always
     #volumes:
     #  - ${VOLUMES_PATH}/postgres:/var/lib/postgresql/data??
     environment:
@@ -11,11 +11,18 @@ services:
       - POSTGRES_DB=${POSTGRES_DB}
 
   api:
+    container_name: tekever_api
     image: tekever/task2:latest
-    #restart: always
+    build: .
+    command: tail -f >> /dev/null
+    #command: python manage.py runserver 0.0.0.0:8000
     depends_on:
       - db
     volumes:
-      - ../src:/task2
+      - ../:/task2
     ports:
       - ${PORT}:8000
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASS}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_DB=${POSTGRES_DB}
