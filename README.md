@@ -13,3 +13,9 @@ Build docker from docker-compose
 	cd docker/
 	docker-compose build
 	docker-compose up -d
+
+
+
+
+Create super user in django
+	# docker-compose run api bash -c "cd /task2/src/ && python manage.py createsuperuser root root@mail.pt 123"
