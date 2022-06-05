@@ -14,7 +14,7 @@ services:
     container_name: tekever_api
     image: tekever/task2:latest
     build: .
-    command: bash -c "cd /task2/src && python manage.py runserver 0.0.0.0:8000"
+    command: bash -c "cd /task2/docker/ && sh run.sh"
     depends_on:
       - db
     volumes:
