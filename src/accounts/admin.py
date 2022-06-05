@@ -9,7 +9,7 @@ class AccountAdmin(admin.ModelAdmin):
 
 
 class TransactionAdmin(admin.ModelAdmin):
-    list_display = ("customerID", "amount", "date")
+    list_display = ("accountID", "amount", "date")
 
 admin.site.register(Account, AccountAdmin)
 admin.site.register(Transaction, TransactionAdmin)

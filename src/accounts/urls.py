@@ -1,8 +1,8 @@
-from .api import BalanceViewSet, TransactionsViewSet
+from .api import AccountRetrieveViewSet, AccountCreateViewSet
 
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'accounts', BalanceViewSet, basename='Account')
-router.register(r'transactions', TransactionsViewSet)
+router.register(r'retrieve', AccountRetrieveViewSet, basename='Account')
+router.register(r'create', AccountCreateViewSet, basename='Account')
 
