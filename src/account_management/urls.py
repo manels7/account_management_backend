@@ -20,7 +20,7 @@ from rest_framework_swagger.views import get_swagger_view
 
 from accounts.urls import router
 
-schema_view = get_swagger_view(title='Pastebin API')
+schema_view = get_swagger_view(title='Account management API')
 
 
 urlpatterns = [
