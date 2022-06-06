@@ -25,12 +25,12 @@ Please create an `.env` file based on `.env-example` where the required ENV vari
 
 ### Postgres variables
 
-<br> POSTGRES_DB        : defines the database's name to be used. <br/> 
-<br> POSTGRES_USER      : defines the postgres username. <br/> 
-<br> POSTGRES_PASSWORD  : defines the postgres password. <br/> 
+* POSTGRES_DB        : defines the database's name to be used.
+* POSTGRES_USER      : defines the postgres username.
+* POSTGRES_PASSWORD  : defines the postgres password.
 
 ### Django variables
-PORT : defines the port for the Django server (development mode)
+* PORT : defines the port for the Django server (development mode)
 
 ## Building the system using Docker-compose
 	cd docker/
@@ -65,8 +65,8 @@ To access the Admin console, go the admin view through `http://localhost:8000/ad
 ## Accessing the Swagger docs
 Documentation on the API schema is provided at `http://localhost:8000/docs/`. Here, the user can view and easily test the implemented creation and retrieval endpoints through the `Try it out` option. The user should have a view as shown next.
 
-<p align="center"><img src="images/api.png" alt="api_endpoints" height="300" border="0" /></p>
+<p align="center"><img src="images/api.png" alt="api_endpoints" height="600" border="0" /></p>
 
-<p align="center"><img src="images/api_create.png" alt="api_post" height="300" border="0" /></p>
+<p align="center"><img src="images/api_create.png" alt="api_post" height="550" border="0" /></p>
 
-<p align="center"><img src="images/api_retrieve.png" alt="api_get" height="300" border="0" /></p>
+<p align="center"><img src="images/api_retrieve.png" alt="api_get" height="400" border="0" /></p>
