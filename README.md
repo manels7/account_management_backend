@@ -25,12 +25,12 @@ Please create an `.env` file based on `.env-example` where the required ENV vari
 
 ### Postgres variables
 
-* POSTGRES_DB        : defines the database's name to be used.
-* POSTGRES_USER      : defines the postgres username.
-* POSTGRES_PASSWORD  : defines the postgres password.
+POSTGRES_DB        : defines the database's name to be used. <br>
+POSTGRES_USER      : defines the postgres username. <br>
+POSTGRES_PASSWORD  : defines the postgres password. <br>
 
 ### Django variables
-* PORT : defines the port for the Django server (development mode)
+PORT : defines the port for the Django server (development mode)
 
 ## Building the system using Docker-compose
 	cd docker/
